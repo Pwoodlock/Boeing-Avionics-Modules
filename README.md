@@ -1,4 +1,4 @@
-# Boeing Aircraft Series Avionic Modules with Project Magent Boeing Suite Avioncs Compatibility (2008)
+# Boeing Aircraft Series Avionic Modules with Project Magenta Boeing Suite Avioncs Compatibility (2008)
 
 This project contains schematics and firmware for three Boeing Aircraft Avionic Modules:
 - **COMM**
