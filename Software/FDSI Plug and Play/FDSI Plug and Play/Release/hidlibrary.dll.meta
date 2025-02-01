@@ -1,0 +1,225 @@
+Assembly HIDLibrary, Version=2.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=SHA1, flags=None
+Assembly Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=SHA1, flags=None
+Assembly System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=SHA1, flags=None
+Class HIDLibrary.HidAsyncState: AutoLayout, AnsiClass, Class, Public
+    Void .ctor(System.Object, System.Object): PrivateScope, Public, SpecialName, RTSpecialName
+  Properties:
+    System.Object CallerDelegate 'get ' : 
+    System.Object CallbackDelegate 'get ' : 
+  Methods:
+    get_CallerDelegate(): PrivateScope, Public, SpecialName
+    get_CallbackDelegate(): PrivateScope, Public, SpecialName
+Class HIDLibrary.HidDevice: AutoLayout, AnsiClass, Class, Public
+  Interfaces:
+    System.IDisposable
+  Properties:
+    Int32 ReadHandle 'get ' : 
+    Int32 WriteHandle 'get ' : 
+    Boolean MonitorDeviceEvents 'get set' : 
+    Boolean IsOpen 'get ' : 
+    Boolean IsConnected 'get ' : 
+    System.String Description 'get ' : 
+    HIDLibrary.HidDeviceCapabilities Capabilities 'get ' : 
+    HIDLibrary.HidDeviceAttributes Attributes 'get ' : 
+    System.String DevicePath 'get ' : 
+  Events:
+    InsertedEventHandler Inserted: 
+    RemovedEventHandler Removed: 
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, VtableLayoutMask, CheckAccessOnOverride
+    add_Inserted(InsertedEventHandler): PrivateScope, Public, SpecialName
+    remove_Inserted(InsertedEventHandler): PrivateScope, Public, SpecialName
+    add_Removed(RemovedEventHandler): PrivateScope, Public, SpecialName
+    remove_Removed(RemovedEventHandler): PrivateScope, Public, SpecialName
+    ToString(): PrivateScope, Public
+    OpenDevice(): PrivateScope, Public
+    OpenDevice(DeviceMode, DeviceMode): PrivateScope, Public
+    CloseDevice(): PrivateScope, Public
+    Read(): PrivateScope, Public
+    Read(ReadCallback): PrivateScope, Public
+    Read(Int32): PrivateScope, Public
+    ReadReport(ReadReportCallback): PrivateScope, Public
+    ReadReport(Int32): PrivateScope, Public
+    ReadReport(): PrivateScope, Public
+    Write(Byte[], WriteCallback): PrivateScope, Public
+    Write(Byte[]): PrivateScope, Public
+    Write(Byte[], Int32): PrivateScope, Public
+    WriteReport(HidReport, WriteCallback): PrivateScope, Public
+    WriteReport(HidReport): PrivateScope, Public
+    WriteReport(HidReport, Int32): PrivateScope, Public
+    CreateReport(): PrivateScope, Public
+    get_ReadHandle(): PrivateScope, Public, SpecialName
+    get_WriteHandle(): PrivateScope, Public, SpecialName
+    get_MonitorDeviceEvents(): PrivateScope, Public, SpecialName
+    set_MonitorDeviceEvents(Boolean): PrivateScope, Public, SpecialName
+    get_IsOpen(): PrivateScope, Public, SpecialName
+    get_IsConnected(): PrivateScope, Public, SpecialName
+    get_Description(): PrivateScope, Public, SpecialName
+    get_Capabilities(): PrivateScope, Public, SpecialName
+    get_Attributes(): PrivateScope, Public, SpecialName
+    get_DevicePath(): PrivateScope, Public, SpecialName
+Class HIDLibrary.HidDevice+InsertedEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Virtual, VtableLayoutMask, CheckAccessOnOverride
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, VtableLayoutMask, CheckAccessOnOverride
+    Invoke(): PrivateScope, Public, Virtual, VtableLayoutMask, CheckAccessOnOverride
+Class HIDLibrary.HidDevice+RemovedEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Virtual, VtableLayoutMask, CheckAccessOnOverride
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, VtableLayoutMask, CheckAccessOnOverride
+    Invoke(): PrivateScope, Public, Virtual, VtableLayoutMask, CheckAccessOnOverride
+Struct HIDLibrary.HidDevice+DeviceMode: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    DeviceMode NonOverlapped = 0 : Public, Static, Literal, HasDefault
+    DeviceMode Overlapped = 1 : Public, Static, Literal, HasDefault
+Class HIDLibrary.HidDevice+ReadCallback: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    BeginInvoke(HidDeviceData, AsyncCallback, Object): PrivateScope, Public, Virtual, VtableLayoutMask, CheckAccessOnOverride
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, VtableLayoutMask, CheckAccessOnOverride
+    Invoke(HidDeviceData): PrivateScope, Public, Virtual, VtableLayoutMask, CheckAccessOnOverride
+Class HIDLibrary.HidDevice+ReadReportCallback: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    BeginInvoke(HidReport, AsyncCallback, Object): PrivateScope, Public, Virtual, VtableLayoutMask, CheckAccessOnOverride
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, VtableLayoutMask, CheckAccessOnOverride
+    Invoke(HidReport): PrivateScope, Public, Virtual, VtableLayoutMask, CheckAccessOnOverride
+Class HIDLibrary.HidDevice+WriteCallback: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    BeginInvoke(Boolean, AsyncCallback, Object): PrivateScope, Public, Virtual, VtableLayoutMask, CheckAccessOnOverride
+    EndInvoke(IAsyncResult): PrivateScope, Public, Virtual, VtableLayoutMask, CheckAccessOnOverride
+    Invoke(Boolean): PrivateScope, Public, Virtual, VtableLayoutMask, CheckAccessOnOverride
+Class HIDLibrary.HidDeviceAttributes: AutoLayout, AnsiClass, Class, Public
+  Properties:
+    Int32 VendorId 'get ' : 
+    Int32 ProductId 'get ' : 
+    Int32 Version 'get ' : 
+    System.String VendorHexId 'get set' : 
+    System.String ProductHexId 'get set' : 
+  Methods:
+    get_VendorId(): PrivateScope, Public, SpecialName
+    get_ProductId(): PrivateScope, Public, SpecialName
+    get_Version(): PrivateScope, Public, SpecialName
+    get_VendorHexId(): PrivateScope, Public, SpecialName
+    set_VendorHexId(String): PrivateScope, Public, SpecialName
+    get_ProductHexId(): PrivateScope, Public, SpecialName
+    set_ProductHexId(String): PrivateScope, Public, SpecialName
+Class HIDLibrary.HidDeviceCapabilities: AutoLayout, AnsiClass, Class, Public
+  Properties:
+    Int16 Usage 'get ' : 
+    Int16 UsagePage 'get ' : 
+    Int16 InputReportByteLength 'get ' : 
+    Int16 OutputReportByteLength 'get ' : 
+    Int16 FeatureReportByteLength 'get ' : 
+    Int16[] Reserved 'get ' : 
+    Int16 NumberLinkCollectionNodes 'get ' : 
+    Int16 NumberInputButtonCaps 'get ' : 
+    Int16 NumberInputValueCaps 'get ' : 
+    Int16 NumberInputDataIndices 'get ' : 
+    Int16 NumberOutputButtonCaps 'get ' : 
+    Int16 NumberOutputValueCaps 'get ' : 
+    Int16 NumberOutputDataIndices 'get ' : 
+    Int16 NumberFeatureButtonCaps 'get ' : 
+    Int16 NumberFeatureValueCaps 'get ' : 
+    Int16 NumberFeatureDataIndices 'get ' : 
+  Methods:
+    get_Usage(): PrivateScope, Public, SpecialName
+    get_UsagePage(): PrivateScope, Public, SpecialName
+    get_InputReportByteLength(): PrivateScope, Public, SpecialName
+    get_OutputReportByteLength(): PrivateScope, Public, SpecialName
+    get_FeatureReportByteLength(): PrivateScope, Public, SpecialName
+    get_Reserved(): PrivateScope, Public, SpecialName
+    get_NumberLinkCollectionNodes(): PrivateScope, Public, SpecialName
+    get_NumberInputButtonCaps(): PrivateScope, Public, SpecialName
+    get_NumberInputValueCaps(): PrivateScope, Public, SpecialName
+    get_NumberInputDataIndices(): PrivateScope, Public, SpecialName
+    get_NumberOutputButtonCaps(): PrivateScope, Public, SpecialName
+    get_NumberOutputValueCaps(): PrivateScope, Public, SpecialName
+    get_NumberOutputDataIndices(): PrivateScope, Public, SpecialName
+    get_NumberFeatureButtonCaps(): PrivateScope, Public, SpecialName
+    get_NumberFeatureValueCaps(): PrivateScope, Public, SpecialName
+    get_NumberFeatureDataIndices(): PrivateScope, Public, SpecialName
+Class HIDLibrary.HidDeviceData: AutoLayout, AnsiClass, Class, Public
+    Void .ctor(ReadStatus): PrivateScope, Public, SpecialName, RTSpecialName
+    Void .ctor(Byte[], ReadStatus): PrivateScope, Public, SpecialName, RTSpecialName
+  Properties:
+    Byte[] Data 'get ' : 
+    ReadStatus Status 'get ' : 
+  Methods:
+    get_Data(): PrivateScope, Public, SpecialName
+    get_Status(): PrivateScope, Public, SpecialName
+Struct HIDLibrary.HidDeviceData+ReadStatus: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ReadStatus Success = 0 : Public, Static, Literal, HasDefault
+    ReadStatus WaitTimedOut = 1 : Public, Static, Literal, HasDefault
+    ReadStatus WaitFail = 2 : Public, Static, Literal, HasDefault
+    ReadStatus NoDataRead = 3 : Public, Static, Literal, HasDefault
+    ReadStatus ReadError = 4 : Public, Static, Literal, HasDefault
+    ReadStatus NotConnected = 5 : Public, Static, Literal, HasDefault
+Class HIDLibrary.HidDeviceIdentifier: AutoLayout, AnsiClass, Class, Public
+    Void .ctor(): PrivateScope, Public, SpecialName, RTSpecialName
+    Void .ctor(Int32, Int32): PrivateScope, Public, SpecialName, RTSpecialName
+    Void .ctor(Int32): PrivateScope, Public, SpecialName, RTSpecialName
+    Void .ctor(System.String): PrivateScope, Public, SpecialName, RTSpecialName
+  Properties:
+    IdentifierTypes Type 'get ' : 
+    System.String DevicePath 'get ' : 
+    Int32 VendorId 'get ' : 
+    Int32 ProductId 'get ' : 
+  Methods:
+    Equals(Int32): PrivateScope, Public, HideBySig
+    Equals(Int32, Int32): PrivateScope, Public, HideBySig
+    Equals(String): PrivateScope, Public, HideBySig
+    get_Type(): PrivateScope, Public, SpecialName
+    get_DevicePath(): PrivateScope, Public, SpecialName
+    get_VendorId(): PrivateScope, Public, SpecialName
+    get_ProductId(): PrivateScope, Public, SpecialName
+Struct HIDLibrary.HidDeviceIdentifier+IdentifierTypes: AutoLayout, AnsiClass, Class, NestedPublic, Sealed
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    IdentifierTypes Any = 0 : Public, Static, Literal, HasDefault
+    IdentifierTypes VendorId = 1 : Public, Static, Literal, HasDefault
+    IdentifierTypes VendorAndProductId = 2 : Public, Static, Literal, HasDefault
+    IdentifierTypes DevicePath = 3 : Public, Static, Literal, HasDefault
+Class HIDLibrary.HidDevices: AutoLayout, AnsiClass, Class, Public, Sealed
+  Methods:
+    IsConnected(String): PrivateScope, Public, Static
+    GetDevice(String): PrivateScope, Public, Static
+    Enumerate(): PrivateScope, Public, Static
+    Enumerate(Int32, Int32): PrivateScope, Public, Static
+    Enumerate(String): PrivateScope, Public, Static
+    Enumerate(Int32): PrivateScope, Public, Static
+Class HIDLibrary.HidReport: AutoLayout, AnsiClass, Class, Public
+    Void .ctor(Int32, HIDLibrary.HidDeviceData): PrivateScope, Public, SpecialName, RTSpecialName
+    Void .ctor(Int32): PrivateScope, Public, SpecialName, RTSpecialName
+  Properties:
+    Boolean Exists 'get ' : 
+    Byte ReportId 'get set' : 
+    Byte[] Data 'get set' : 
+    ReadStatus ReadStatus 'get ' : 
+  Methods:
+    get_Exists(): PrivateScope, Public, SpecialName
+    get_ReportId(): PrivateScope, Public, SpecialName
+    set_ReportId(Byte): PrivateScope, Public, SpecialName
+    get_Data(): PrivateScope, Public, SpecialName
+    set_Data(Byte[]): PrivateScope, Public, SpecialName
+    get_ReadStatus(): PrivateScope, Public, SpecialName
+    GetBytes(): PrivateScope, Public

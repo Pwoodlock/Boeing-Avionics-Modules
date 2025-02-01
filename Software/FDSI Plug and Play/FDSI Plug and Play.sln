@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FDSI Plug and Play", "FDSI Plug and Play\FDSI Plug and Play.vcproj", "{C72D14B7-0BFE-4F75-B54F-C29EA269A45B}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FDSI Setup", "FDSI Setup\FDSI Setup.vdproj", "{C4E5E374-08FA-400E-A387-18C65A5234F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C72D14B7-0BFE-4F75-B54F-C29EA269A45B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C72D14B7-0BFE-4F75-B54F-C29EA269A45B}.Debug|Win32.Build.0 = Debug|Win32
+		{C72D14B7-0BFE-4F75-B54F-C29EA269A45B}.Release|Win32.ActiveCfg = Release|Win32
+		{C72D14B7-0BFE-4F75-B54F-C29EA269A45B}.Release|Win32.Build.0 = Release|Win32
+		{C4E5E374-08FA-400E-A387-18C65A5234F5}.Debug|Win32.ActiveCfg = Debug
+		{C4E5E374-08FA-400E-A387-18C65A5234F5}.Release|Win32.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
