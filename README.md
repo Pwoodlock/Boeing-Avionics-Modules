@@ -1,17 +1,23 @@
 # Boeing Aircraft Series Avionic Modules with Project Magent Boeing Suite Avioncs Compatibility (2008)
 
 This project contains schematics and firmware for three Boeing Aircraft Avionic Modules:
+
 - **COMM**
 - **NAV**
 - **ADF**
+
+**The Following will be uploaded soon,**
+
+- Gerber files for the PCB's to Manufacture the modules.
+- Bill of Materials for the modules.
+- Native Instrument files for the PCB & Schematic Capture.
 - .NET Application which links the hardware modules to the FlightSimulator, which in this instance is (MSFS2004) which in turn links to FSUIPC from Pete Dawson.
 
+Any questions, please contact me.
 
-I will upload the rest of the project in due course, as I need to seriously carry out some house keeping until it's format is usable for the Person/s interested.
-
+I'll upload the rest of the project in due course, as I need to seriously carry out some house keeping until it's format is usable for the Person/s interested.
 
 The code includes USB device and host functionality, HID and CDC examples, and display/encoder routines. The firmware has been designed for Microchip PIC microcontrollers using both C18 and C30 compilers. Schematics and additional design materials are available in the project directories.
-
 
 ## Project Structure
 
@@ -55,7 +61,6 @@ Refer to inline comments and function documentation within the code for addition
 
 This project is licensed under the GNU General Public License v3.0.  
 See [LICENSE](LICENSE) for more details.
-
 
 ## Acknowledgements
 
